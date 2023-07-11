@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Plot</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <main>
+      <h1>Simple Plot</h1>
+      <div id="myplot"></div>
+    </main>
+
+    <!-- Libs -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <!-- Script -->
+    <script type="module">
+      const plot = Plot.rectY(
+        { length: 10000 },
+        Plot.binX({ y: "count" }, { x: Math.random })
+      ).plot();
+
+      const div = document.querySelector("#myplot");
+      div.append(plot);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mapa de passageiros do Titanic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <main>
+      <h1>Mapa de passageiros do Titanic</h1>
+      <p class="lead">
+        Veja os destinos dos passageiros por país, a partir de cada porto de
+        embarque
+      </p>
+
+      <label>
+        Selecione o porto:
+        <select id="selectPort">
+          <option value="all">Todos</option>
+          <option value="Cherbourg">Cherbourg</option>
+          <option value="Queenstown">Queenstown</option>
+          <option value="Southampton">Southampton</option>
+        </select>
+      </label>
+
+      <div id="map"></div>
+    </main>
+
+    <!-- Libs -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <!-- Script -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
